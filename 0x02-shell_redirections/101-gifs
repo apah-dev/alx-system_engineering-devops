@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f -name "*.git" | rev | cut -d "/" -f 1 | cut -d '.' 2- | rev
+find . -type f -name "*.gif" -exec readlink -f {} + | rev | cut -f 2- -d '.' | rev | sort -f -t$'\t' -k1,1 | xargs -I{} printf "%s\n" {}
