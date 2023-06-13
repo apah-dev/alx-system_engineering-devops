@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -n '' | nl -bp'2' | cut -f2-
